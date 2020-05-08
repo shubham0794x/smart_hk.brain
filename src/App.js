@@ -57,6 +57,15 @@ calculateFaceLocation = (data) => {
   }
 }
 
+onRouteChange = (route) => {
+  if (route === 'signout') {
+    this.setState(initialState)
+  } else if (route === 'home') {
+    this.setState({isSignedIn: true})
+  }
+  this.setState({route: route});
+}
+
 displayFaceBox = (box) => {
   this.setState({box: box});
 }
